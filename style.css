@@ -51,10 +51,14 @@ form{
     width: 200px;
     
 }
+.fila{
+    display: flex;
+}
 #grid{
     justify-self: center;
     
     display: flex;
+    flex-direction: column;
     min-width: 600px;
     min-height: 600px;
     max-width: 610px;

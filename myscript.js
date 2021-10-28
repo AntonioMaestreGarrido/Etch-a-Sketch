@@ -1,5 +1,5 @@
 // setting variables
-var total = 63;
+var total = 65;
 var ancho = ((600 / total))
 var gridArray = new Array(total);
 var grid = document.querySelector("#grid")
@@ -30,30 +30,33 @@ slider.oninput = function() {
     
   } 
 function eraseGrid(){
-    for (let i = 0; i < total; i++) {
-        for (let j = 0; j < total; j++) {
-            gridArray[i][j].classList.add('casilla');
-            grid.removeChild(gridArray[i][j]);
-        }
-    }
+    grid.querySelectorAll(".fila").forEach(f=>{grid.removeChild(f)});
+    
+    
 }
+function sss(){
 
+}
 
 
 function setGrid() {
     
     for (let i = 0; i < total; i++) {
         gridArray[i] = new Array(total)
+        var n=document.createElement('div');
+        n.classList.add('fila');
+        grid.appendChild(n)
         for (let j = 0; j < total; j++) {
 
             gridArray[i][j] = document.createElement('div');
+            gridArray[i][j].classList.add('casilla');
+            n.appendChild(gridArray[i][j])
         }
     }
 
     for (let i = 0; i < total; i++) {
         for (let j = 0; j < total; j++) {
-            gridArray[i][j].classList.add('casilla');
-            grid.appendChild(gridArray[i][j])
+            
         }
     }
 }
