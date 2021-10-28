@@ -1,0 +1,69 @@
+
+*{
+    margin: 0;
+    padding: 0px;
+    background-color: rgb(92, 117, 228);
+   
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    border: solid 1px black;
+    margin: 30px;
+    
+}
+
+#cuerpo{
+    background-color: blue;
+    display: flex;
+    border: solid 2px black;
+      font-size: 46px; 
+      
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    
+}
+button{
+    background-color: rgba(50, 42, 165, 0.219);
+    font: 16px bolder;
+    font-weight: 800;
+    width: 150px;
+    height: 40px;
+   
+    
+    border-radius: 15px;
+    
+}
+
+#side{
+    
+    
+    width: 200px;
+}
+#grid{
+    justify-self: center;
+    background-color: brown;
+    display: flex;
+    width: 600px;
+    height: 600px;
+    
+    
+    flex-wrap: wrap;
+    
+    padding: 0px;
+    
+
+}
+.casilla{
+    box-sizing: border-box;
+    border: solid 1px black;
+    display: inline;
+   background-color: white;
+    width:   var(--ancho);
+    height:  var(--ancho);
+    margin: 0px;
+    gap: 0;
+
+
+}
