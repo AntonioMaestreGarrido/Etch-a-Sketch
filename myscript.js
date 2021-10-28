@@ -1,5 +1,5 @@
 // setting variables
-var total = 65;
+var total = 16;
 var ancho = ((600 / total))
 var gridArray = new Array(total);
 var grid = document.querySelector("#grid")
@@ -7,6 +7,8 @@ var raibow = false
 var erase = false
 var slider = document.getElementById("myRange");
 var size = document.getElementById("size");
+var SelectorColor=document.getElementById("favcolor")
+
 //setting CSS var to calculate grid
 document.documentElement.style.setProperty('--total', total);
 document.documentElement.style.setProperty('--ancho', ancho + "px");
@@ -63,9 +65,11 @@ function setGrid() {
 
 
 function changeColor(e) {
-    if (erase) { e.target.style = "background-color: white"; return }
+    if (erase) { e.target.style = "background-color: rgb(32, 145, 238)"; return }
     if (!raibow) {
+        console.log(SelectorColor.value);
         e.target.style = "background-color: black";
+        e.target.style = `background-color: ${SelectorColor.value}`;
     }
     else {
         let R = Math.floor(Math.random() * 255)
@@ -76,10 +80,13 @@ function changeColor(e) {
         e.target.style = `background-color: rgb(${R},${G},${B});`;
     }
 }
+function clear(){
+    grid.querySelectorAll(".casilla").forEach(c => c.style = "background-color: rgb(32, 145, 238)");
 
+}
 
 function setSelector() {
-    document.querySelectorAll("#borratodo").forEach(e => e.addEventListener("click", _ => location.reload()))
+    document.querySelectorAll("#borratodo").forEach(e => e.addEventListener("click", _ => {clear()}))
     document.querySelectorAll("#borra").forEach(e => e.addEventListener("click", _ => { erase = true }))
     document.querySelectorAll("#rai").forEach(e => e.addEventListener("click", _ => { raibow = true; erase = false }))
     document.querySelectorAll("#mono").forEach(e => e.addEventListener("click", _ => { raibow = false; erase = false; }))
