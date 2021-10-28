@@ -2,21 +2,22 @@
 *{
     margin: 0;
     padding: 0px;
-    background-color: rgb(92, 117, 228);
+    background-color: rgb(32, 145, 238);
    
 }
 h1{
     text-align: center;
-    font-size: 60px;
-    border: solid 1px black;
+    font-size: 80px;
+    
     margin: 30px;
+    
     
 }
 
 #cuerpo{
-    background-color: blue;
+    
     display: flex;
-    border: solid 2px black;
+    
       font-size: 46px; 
       
     justify-content: center;
@@ -25,7 +26,8 @@ h1{
     
 }
 button{
-    background-color: rgba(50, 42, 165, 0.219);
+    background-color: rgba(23, 6, 102, 0.219);
+    color: black;
     font: 16px bolder;
     font-weight: 800;
     width: 150px;
@@ -47,7 +49,7 @@ button{
     display: flex;
     width: 600px;
     height: 600px;
-    
+    border :solid 4px black;
     
     flex-wrap: wrap;
     
@@ -59,7 +61,7 @@ button{
     box-sizing: border-box;
     border: solid 1px black;
     display: inline;
-   background-color: white;
+    background-color: rgb(32, 145, 238);
     width:   var(--ancho);
     height:  var(--ancho);
     margin: 0px;
