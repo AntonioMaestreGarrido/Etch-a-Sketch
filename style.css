@@ -53,10 +53,12 @@ form{
 }
 #grid{
     justify-self: center;
-    background-color: brown;
+    
     display: flex;
-    width: 600px;
-    height: 600px;
+    min-width: 600px;
+    min-height: 600px;
+    max-width: 610px;
+    max-height: 610px;
     border :solid 4px black;
     
     flex-wrap: wrap;

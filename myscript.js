@@ -1,5 +1,5 @@
 // setting variables
-var total = 32;
+var total = 63;
 var ancho = ((600 / total))
 var gridArray = new Array(total);
 var grid = document.querySelector("#grid")
@@ -14,12 +14,31 @@ setGrid();
 setSelector();
 
 slider.oninput = function() {
+    eraseGrid();
     size.innerHTML = this.value;
+    total=this.value;
+    ancho = ((600 / total))
+    gridArray=null
+    gridArray = new Array(total);
+    document.documentElement.style.setProperty('--total', total);
+    document.documentElement.style.setProperty('--ancho', ancho + "px");
+    
     total=this.value
 
     setGrid();
-    location.reload()
+    setSelector();
+    
   } 
+function eraseGrid(){
+    for (let i = 0; i < total; i++) {
+        for (let j = 0; j < total; j++) {
+            gridArray[i][j].classList.add('casilla');
+            grid.removeChild(gridArray[i][j]);
+        }
+    }
+}
+
+
 
 function setGrid() {
     
