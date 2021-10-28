@@ -6,16 +6,23 @@ var grid = document.querySelector("#grid")
 var raibow = false
 var erase = false
 var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var size = document.getElementById("size");
 //setting CSS var to calculate grid
 document.documentElement.style.setProperty('--total', total);
 document.documentElement.style.setProperty('--ancho', ancho + "px");
 setGrid();
 setSelector();
+
 slider.oninput = function() {
-    output.innerHTML = this.value;
+    size.innerHTML = this.value;
+    total=this.value
+
+    setGrid();
+    location.reload()
   } 
+
 function setGrid() {
+    
     for (let i = 0; i < total; i++) {
         gridArray[i] = new Array(total)
         for (let j = 0; j < total; j++) {
@@ -43,7 +50,7 @@ function changeColor(e) {
         let G = Math.floor(Math.random() * 255)
         let B = Math.floor(Math.random() * 255)
         let col = `background-color: rgb(${R},${G},${B});`
-        console.log(col)
+        
         e.target.style = `background-color: rgb(${R},${G},${B});`;
     }
 }

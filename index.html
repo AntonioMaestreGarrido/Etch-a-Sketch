@@ -18,25 +18,36 @@
 <body>
     <header>
         <h1>Etch-A-Sketch</h1>
-    
+
     </header>
-    
-   <div id=cuerpo>
+
+    <div id=cuerpo>
         <div id="side">
-            <p>asadd</p>
-            <p>asadd</p>
-            
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <p>Choose color</p>
-            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+
             <button Id="borratodo">Clear all</button>
             <button Id="borra">Erase</button>
             <button Id="rai">Raibow mode</button>
             <button Id="mono">Monocrome</button>
-    
+
+            <form>
+                <label >Size ( 1 - 100):</label>
+                <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
+                <label ><p id="size">16</p></label>
+            </form>
+
+
+
+            <form>
+                <label>
+                    <p>Pick a color</p>
+                </label>
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+            </form>
+
         </div>
         <div id="grid"></div>
-   </div>
+    </div>
 
 
 </body>

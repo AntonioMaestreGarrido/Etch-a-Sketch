@@ -18,30 +18,38 @@ h1{
     
     display: flex;
     
-      font-size: 46px; 
+      font-size: 16px; 
       
     justify-content: center;
     gap: 20px;
     text-align: center;
     
 }
+p{
+    font-size: 14px;
+    font-weight: bold;
+}
 button{
     background-color: rgba(23, 6, 102, 0.219);
+    
     color: black;
     font: 16px bolder;
     font-weight: 800;
     width: 150px;
     height: 40px;
-   
+   margin: 18px 5px;
     
     border-radius: 15px;
     
 }
-
+form{
+    margin: 18px 5px;
+}
 #side{
     
-    
+    border: solid 3px black;
     width: 200px;
+    
 }
 #grid{
     justify-self: center;
