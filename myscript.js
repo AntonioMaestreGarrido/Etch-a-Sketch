@@ -5,9 +5,9 @@ var gridArray = new Array(total);
 var grid = document.querySelector("#grid")
 var raibow = false
 var erase = false
-var slider = document.getElementById("myRange");
-var size = document.getElementById("size");
-var SelectorColor=document.getElementById("favcolor")
+var slider = document.getElementById("myRange");slider.value=16
+var size = document.getElementById("size");size.innerHTML = total + "X"+total;
+var SelectorColor=document.getElementById("favcolor");SelectorColor.value="#000000"
 
 //setting CSS var to calculate grid
 document.documentElement.style.setProperty('--total', total);
@@ -17,7 +17,7 @@ setSelector();
 
 slider.oninput = function() {
     eraseGrid();
-    size.innerHTML = this.value;
+    size.innerHTML = this.value + "X"+this.value;
     total=this.value;
     ancho = ((600 / total))
     gridArray=null
@@ -36,9 +36,7 @@ function eraseGrid(){
     
     
 }
-function sss(){
 
-}
 
 
 function setGrid() {
